@@ -86,62 +86,34 @@ const theme = {
   "typography": {
     "fontFamily": "QBE Sans VF",
     "fontWeight": {
-      "regular": 400,
-      "medium": 500,
-      "mediumStrong": 525,
-      "semiBoldLight": 550,
-      "semiBold": 600,
-      "bold": 700
+      "regular": "400",
+      "medium": "500",
+      "mediumStrong": "525",
+      "semiBoldLight": "550",
+      "semiBold": "600",
+      "bold": "700"
     },
     "h1": {
       "fontFamily": "QBE Sans VF",
-      "fontWeight": 500,
-      "fontSize": 72,
-      "lineHeight": 72,
-      "letterSpacing": 0.38
+      "fontWeight": "500",
+      "fontSize": "72",
+      "lineHeight": "72",
+      "letterSpacing": "0.38"
     },
     "h2": {
       "fontFamily": "QBE Sans VF",
-      "fontWeight": 500,
-      "fontSize": 48,
-      "lineHeight": 52,
-      "letterSpacing": 0.25
+      "fontWeight": "500",
+      "fontSize": "48",
+      "lineHeight": "52",
+      "letterSpacing": "0.25"
     },
     "h3": {
       "fontFamily": "QBE Sans VF",
-      "fontWeight": 500,
-      "fontSize": 34,
-      "lineHeight": 38,
-      "letterSpacing": 0
+      "fontWeight": "500",
+      "fontSize": "34",
+      "lineHeight": "38",
+      "letterSpacing": "0"
     }
-  },
-  "spacing": {
-    "0": 0,
-    "25": 2,
-    "50": 4,
-    "100": 8,
-    "150": 12,
-    "200": 16,
-    "225": 18,
-    "250": 20,
-    "300": 24,
-    "350": 28,
-    "400": 32,
-    "450": 36,
-    "500": 40,
-    "550": 44,
-    "600": 48,
-    "650": 52,
-    "700": 56,
-    "750": 60,
-    "800": 64,
-    "900": 72,
-    "1000": 80,
-    "1100": 88,
-    "1200": 96,
-    "1300": 104,
-    "1400": 112,
-    "1500": 120
   }
 };
 
