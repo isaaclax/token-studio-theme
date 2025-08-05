@@ -22,9 +22,12 @@ jobs:
         run: node transform-tokens.js
 
       - name: Commit and push theme.js
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
           git add theme.js
           git commit -m 'Auto-generated MUI theme from Figma tokens'
           git push
