@@ -1,33 +1,42 @@
-name: Transform Figma Tokens to MUI Theme
+const fs = require('fs');
 
-on:
-  push:
-    paths:
-      - 'tokens.json'
+// Load the token file
+const rawData = fs.readFileSync('tokens.json');
+const tokens = JSON.parse(rawData);
 
-jobs:
-  build-theme:
-    runs-on: ubuntu-latest
+// Extract the primitive token set
+const primitive = tokens['primitive'] || {};
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+// Validate required keys
+const requiredKeys = ['palette', 'typography', 'dimension'];
+const missingKeys = requiredKeys.filter(key => !(key in primitive));
+if (missingKeys.length > 0) {
+  throw new Error(`Missing required keys in token file: ${missingKeys.join(', ')}`);
+}
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+// Helper function to extract $value from nested token structure
+function extractValues(tokenSection) {
+  const result = {};
+  for (const key in tokenSection) {
+    const value = tokenSection[key];
+    if (typeof value === 'object' && '$value' in value) {
+      result[key] = value['$value'];
+    } else if (typeof value === 'object') {
+      result[key] = extractValues(value);
+    }
+  }
+  return result;
+}
 
-      - name: Run transformation script
-        run: node transform-tokens.js
+// Build MUI theme object
+const muiTheme = {
+  palette: extractValues(primitive['palette']),
+  typography: extractValues(primitive['typography']),
+  spacing: extractValues(primitive['dimension'])
+};
 
-      - name: Commit and push theme.js
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}
-          git add theme.js
-          git commit -m 'Auto-generated MUI theme from Figma tokens'
-          git push
+// Output to theme.js
+const output = `const theme = ${JSON.stringify(muiTheme, null, 2)};\n\nexport default theme;`;
+fs.writeFileSync('theme.js', output);
+
+console.log('MUI theme successfully generated in theme.js.');
