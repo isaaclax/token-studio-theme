@@ -85,17 +85,6 @@ const theme = {
   },
   "typography": {
     "fontFamily": "QBE Sans VF",
-    "fontSize": {
-      "xs": 14,
-      "sm": 16,
-      "md": 18,
-      "lg": 20,
-      "xl": 22,
-      "2xl": 26,
-      "3xl": 34,
-      "4xl": 48,
-      "5xl": 72
-    },
     "fontWeight": {
       "regular": "400",
       "medium": 500,
@@ -104,48 +93,26 @@ const theme = {
       "semiBold": 600,
       "bold": 700
     },
-    "lineHeight": {
-      "xs": "19.6",
-      "sm": 20,
-      "md": 22,
-      "lg": 24,
-      "xl": 25,
-      "2xl": 32,
-      "3xl": 38,
-      "4xl": 52,
-      "5xl": 72
-    },
-    "letterSpacing": {
-      "xs": "-0.08",
-      "sm": 0,
-      "md": 0.09,
-      "lg": 0.2,
-      "xl": 0.25,
-      "2xl": 0.3,
-      "3xl": 0.38,
-      "4xl": 0.4,
-      "5xl": 0.8
-    },
     "h1": {
-      "fontFamily": "{typography.fontFamily}",
-      "fontWeight": "{typography.fontWeight.medium}",
-      "fontSize": "{typography.fontSize.5xl}",
-      "lineHeight": "{typography.lineHeight.5xl}",
-      "letterSpacing": "{typography.letterSpacing.3xl}"
+      "fontWeight": "500",
+      "fontSize": "72",
+      "lineHeight": "72",
+      "letterSpacing": "0.38",
+      "fontFamily": "QBE Sans VF"
     },
     "h2": {
-      "fontFamily": "{typography.fontFamily}",
-      "fontWeight": "{typography.fontWeight.medium}",
-      "fontSize": "{typography.fontSize.4xl}",
-      "lineHeight": "{typography.lineHeight.4xl}",
-      "letterSpacing": "{typography.letterSpacing.xl}"
+      "fontFamily": "QBE Sans VF",
+      "fontWeight": "500",
+      "fontSize": "48",
+      "lineHeight": "52",
+      "letterSpacing": "0.25"
     },
     "h3": {
-      "fontFamily": "{typography.fontFamily}",
-      "fontWeight": "{typography.fontWeight.medium}",
-      "fontSize": "{typography.fontSize.3xl}",
-      "lineHeight": "{typography.lineHeight.3xl}",
-      "letterSpacing": "{typography.letterSpacing.sm}"
+      "fontFamily": "QBE Sans VF",
+      "fontWeight": "500",
+      "fontSize": "34",
+      "lineHeight": "38",
+      "letterSpacing": "0"
     }
   },
   "spacing": {
