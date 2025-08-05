@@ -35,6 +35,11 @@ const baseTheme = {
   spacing: extractValues(primitive['dimension'])
 };
 
+// Add raw references (like h1, h2, h3) to the theme before resolving
+if (primitive.typography.h1) baseTheme.typography.h1 = primitive.typography.h1['$value'];
+if (primitive.typography.h2) baseTheme.typography.h2 = primitive.typography.h2['$value'];
+if (primitive.typography.h3) baseTheme.typography.h3 = primitive.typography.h3['$value'];
+
 // Helper function to resolve token references like "{typography.fontSize.5xl}"
 function resolveReference(ref, theme) {
   const path = ref.replace(/[{}]/g, '').split('.');
