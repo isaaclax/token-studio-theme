@@ -8,7 +8,7 @@ const tokens = JSON.parse(rawData);
 const primitive = tokens['primitive'] || {};
 
 // Validate required keys
-const requiredKeys = ['palette', 'typography', 'dimension'];
+const requiredKeys = ['palette', 'typography'];
 const missingKeys = requiredKeys.filter(key => !(key in primitive));
 if (missingKeys.length > 0) {
   throw new Error(`Missing required keys in token file: ${missingKeys.join(', ')}`);
@@ -31,8 +31,7 @@ function extractValues(tokenSection) {
 // Build MUI theme object
 const muiTheme = {
   palette: extractValues(primitive['palette']),
-  typography: extractValues(primitive['typography']),
-  spacing: extractValues(primitive['dimension'])
+  typography: extractValues(primitive['typography'])
 };
 
 // Output to theme.js
