@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Load the token file
-const rawData = fs.readFileSync('tokens (2).json');
+const rawData = fs.readFileSync('tokens.json');
 const tokens = JSON.parse(rawData);
 
 // Extract the primitive token set
