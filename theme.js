@@ -86,7 +86,7 @@ const theme = {
   "typography": {
     "fontFamily": "QBE Sans VF",
     "fontWeight": {
-      "regular": "400",
+      "regular": 400,
       "medium": 500,
       "mediumStrong": 525,
       "semiBoldLight": 550,
@@ -94,25 +94,25 @@ const theme = {
       "bold": 700
     },
     "h1": {
-      "fontWeight": "500",
-      "fontSize": "72",
-      "lineHeight": "72",
-      "letterSpacing": "0.38",
-      "fontFamily": "QBE Sans VF"
+      "fontFamily": "QBE Sans VF",
+      "fontWeight": 500,
+      "fontSize": 72,
+      "lineHeight": 72,
+      "letterSpacing": 0.38
     },
     "h2": {
       "fontFamily": "QBE Sans VF",
-      "fontWeight": "500",
-      "fontSize": "48",
-      "lineHeight": "52",
-      "letterSpacing": "0.25"
+      "fontWeight": 500,
+      "fontSize": 48,
+      "lineHeight": 52,
+      "letterSpacing": 0.25
     },
     "h3": {
       "fontFamily": "QBE Sans VF",
-      "fontWeight": "500",
-      "fontSize": "34",
-      "lineHeight": "38",
-      "letterSpacing": "0"
+      "fontWeight": 500,
+      "fontSize": 34,
+      "lineHeight": 38,
+      "letterSpacing": 0
     }
   },
   "spacing": {
