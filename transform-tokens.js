@@ -28,15 +28,45 @@ function extractValues(tokenSection) {
   return result;
 }
 
-// Build MUI theme object
-const muiTheme = {
+// Build base theme object
+const baseTheme = {
   palette: extractValues(primitive['palette']),
   typography: extractValues(primitive['typography']),
   spacing: extractValues(primitive['dimension'])
 };
 
+// Helper function to resolve token references like "{typography.fontSize.5xl}"
+function resolveReference(ref, theme) {
+  const path = ref.replace(/[{}]/g, '').split('.');
+  let value = theme;
+  for (const key of path) {
+    value = value?.[key];
+    if (value === undefined) return ref; // fallback to original if not found
+  }
+  return value;
+}
+
+// Recursively resolve references in theme object
+function resolveNestedReferences(obj, theme) {
+  if (typeof obj === 'string' && obj.match(/^\\{[^}]+\\}$/)) {
+    return resolveReference(obj, theme);
+  } else if (Array.isArray(obj)) {
+    return obj.map(item => resolveNestedReferences(item, theme));
+  } else if (typeof obj === 'object' && obj !== null) {
+    const resolved = {};
+    for (const key in obj) {
+      resolved[key] = resolveNestedReferences(obj[key], theme);
+    }
+    return resolved;
+  }
+  return obj;
+}
+
+// Apply reference resolution to the entire theme
+const resolvedTheme = resolveNestedReferences(baseTheme, baseTheme);
+
 // Output to theme.js
-const output = `const theme = ${JSON.stringify(muiTheme, null, 2)};\n\nexport default theme;`;
+const output = `const theme = ${JSON.stringify(resolvedTheme, null, 2)};\n\nexport default theme;`;
 fs.writeFileSync('theme.js', output);
 
-console.log('MUI theme successfully generated in theme.js.');
+console.log('MUI theme with resolved references successfully generated in theme.js.');
