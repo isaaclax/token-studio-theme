@@ -59,7 +59,7 @@ const theme = {
     "accent": {
       "primary": "#f9760a",
       "secondary": "#00c457",
-      "tertiary": "#fa0808"
+      "tertiary": "#0786fa"
     },
     "text": {
       "primary": "#2d2d2d",
