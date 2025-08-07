@@ -30,8 +30,11 @@ function extractValues(tokenSection) {
 
 // Build MUI theme object
 const muiTheme = {
+  breakpoints: extractValues(primitive['breakpoints']),
   palette: extractValues(primitive['palette']),
-  typography: extractValues(primitive['typography'])
+  typography: extractValues(primitive['typography']),
+  spacing: extractValues(primitive['spacing']),
+  shape: extractValues(primitive['shape'])
 };
 
 // Output to theme.js
