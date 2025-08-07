@@ -1,4 +1,12 @@
 const theme = {
+  "breakpoints": {
+    "values": {
+      "xs": "0px",
+      "sm": "768px",
+      "md": "992px",
+      "lg": "1200px"
+    }
+  },
   "palette": {
     "primary": {
       "light": "#009ae4",
@@ -113,6 +121,199 @@ const theme = {
       "fontSize": "34",
       "lineHeight": "38",
       "letterSpacing": "0"
+    },
+    "h4": {
+      "fontFamily": "QBE Sans VF",
+      "fontWeight": "525",
+      "fontSize": "26",
+      "lineHeight": "32",
+      "letterSpacing": "0"
+    },
+    "h5": {
+      "fontFamily": "QBE Sans VF",
+      "fontWeight": "550",
+      "fontSize": "22",
+      "lineHeight": "24",
+      "letterSpacing": "0.4"
+    },
+    "subtitle1": {
+      "medium": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "20",
+        "lineHeight": "24",
+        "letterSpacing": "0.3",
+        "fontWeight": "500"
+      },
+      "semiBold": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "20",
+        "lineHeight": "24",
+        "letterSpacing": "0.3",
+        "fontWeight": "600"
+      }
+    },
+    "subtitle2": {
+      "medium": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "18",
+        "lineHeight": "22",
+        "letterSpacing": "0.4",
+        "fontWeight": "500"
+      },
+      "semiBold": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "18",
+        "lineHeight": "22",
+        "letterSpacing": "0.4",
+        "fontWeight": "600"
+      }
+    },
+    "body1": {
+      "regular": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "18",
+        "lineHeight": "25",
+        "letterSpacing": "-0.08",
+        "fontWeight": "400"
+      },
+      "semiBold": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "18",
+        "lineHeight": "25",
+        "letterSpacing": "-0.08",
+        "fontWeight": "600"
+      }
+    },
+    "body2": {
+      "regular": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "16",
+        "lineHeight": "22",
+        "letterSpacing": "0.09",
+        "fontWeight": "400"
+      },
+      "semiBold": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "16",
+        "lineHeight": "22",
+        "letterSpacing": "0.09",
+        "fontWeight": "600"
+      }
+    },
+    "body3": {
+      "regular": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "14",
+        "lineHeight": "19.6",
+        "letterSpacing": "0.3",
+        "fontWeight": "400"
+      },
+      "semiBold": {
+        "fontFamily": "QBE Sans VF",
+        "fontSize": "14",
+        "lineHeight": "19.6",
+        "letterSpacing": "0.3",
+        "fontWeight": "600"
+      }
+    },
+    "button1": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "18",
+      "lineHeight": "25",
+      "letterSpacing": "0.2",
+      "fontWeight": "500"
+    },
+    "button2": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "16",
+      "lineHeight": "20",
+      "letterSpacing": "0.2",
+      "fontWeight": "500"
+    },
+    "button3": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "14",
+      "lineHeight": "20",
+      "letterSpacing": "0",
+      "fontWeight": "500"
+    },
+    "link1": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "18",
+      "lineHeight": "25",
+      "letterSpacing": "-0.08",
+      "fontWeight": "500"
+    },
+    "link2": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "16",
+      "lineHeight": "22",
+      "letterSpacing": "0.09",
+      "fontWeight": "500"
+    },
+    "link3": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "14",
+      "lineHeight": "19.6",
+      "letterSpacing": "0.3",
+      "fontWeight": "500"
+    },
+    "caption1": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "16",
+      "lineHeight": "22",
+      "letterSpacing": "0.8",
+      "fontWeight": "400"
+    },
+    "caption2": {
+      "fontFamily": "QBE Sans VF",
+      "fontSize": "14",
+      "lineHeight": "20",
+      "letterSpacing": "0.8",
+      "fontWeight": "400"
+    }
+  },
+  "spacing": {
+    "0": "0px",
+    "1": "8px",
+    "2": "16px",
+    "3": "24px",
+    "4": "32px",
+    "5": "40px",
+    "6": "48px",
+    "7": "56px",
+    "8": "64px",
+    "9": "72px",
+    "10": "80px",
+    "11": "88px",
+    "12": "96px",
+    "13": "104px",
+    "14": "112px",
+    "15": "120px",
+    "0_5": "4px",
+    "1_5": "12px",
+    "2_5": "20px",
+    "3_5": "28px",
+    "4_5": "36px",
+    "5_5": "44px",
+    "6_5": "52px",
+    "7_5": "60px",
+    "8_5": "68px",
+    "9_5": "76px",
+    "10_5": "84px",
+    "11_5": "92px",
+    "12_5": "100px",
+    "13_5": "108px",
+    "14_5": "116px"
+  },
+  "shape": {
+    "borderRadius": {
+      "1": "4px",
+      "8": "32px",
+      "12": "48px",
+      "16": "64px",
+      "24": "96px",
+      "0_5": "2px"
     }
   }
 };
