@@ -34,7 +34,8 @@ const muiTheme = {
   palette: extractValues(primitive['palette']),
   typography: extractValues(primitive['typography']),
   spacing: extractValues(primitive['spacing']),
-  shape: extractValues(primitive['shape'])
+  shape: extractValues(primitive['shape']),
+  iconSize: extractValues(primitive['iconSize'])
 };
 
 // Output to theme.js
